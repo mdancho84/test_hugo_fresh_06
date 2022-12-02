@@ -3,6 +3,9 @@ label: Blog Template
 hide_body: false
 fields:
 - type: text
+  name: title
+  label: title
+- type: text
   name: author
   label: author
 - type: datetime
@@ -14,6 +17,3 @@ fields:
 - type: boolean
   name: include_cta
   label: include_cta
-- type: text
-  name: title
-  label: title
