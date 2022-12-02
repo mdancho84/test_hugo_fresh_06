@@ -1,0 +1,19 @@
+---
+label: Blog Template
+hide_body: false
+fields:
+- type: text
+  name: author
+  label: author
+- type: datetime
+  name: date
+  label: date
+- type: file
+  name: image
+  label: image
+- type: boolean
+  name: include_cta
+  label: include_cta
+- type: text
+  name: title
+  label: title
