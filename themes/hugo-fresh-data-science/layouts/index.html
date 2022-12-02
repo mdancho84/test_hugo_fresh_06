@@ -1,0 +1,37 @@
+{{ define "main" }}
+    {{ if .Site.Params.section1_attention }}
+    {{ partial "section1-attention.html" . }}
+    {{ end }}
+
+    {{ if .Site.Params.section2_transformation }}
+    {{ partial "section2-transformation.html" . }}
+    {{ end }}
+
+    {{ if .Site.Params.section3_interest }}
+    {{ partial "section3-interest.html" . }}
+    {{ end }}
+
+    {{ if .Site.Params.section4_desire }}
+    {{ partial "section4-desire.html" . }}
+    {{ end }}
+
+    {{ if .Site.Params.section5_faq }}
+    {{ partial "section5-faq.html" . }}
+    {{ end }}
+    
+    {{ if .Site.Params.section6_action }}
+    {{ partial "section6-action.html" . }}
+    {{ end }}
+
+    {{ if .Site.Params.footer }}
+    {{ partial "footer.html" . }}
+    {{ end }}
+
+    <!-- Back To Top Button -->
+    <div id="backtotop"><a href="#"></a></div>
+
+    {{ if .Site.Params.sidebar }}
+    {{ partial "sidebar.html" . }}
+    {{ end }}
+    
+{{ end }}

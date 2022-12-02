@@ -1,0 +1,37 @@
+{{ define "main" }}
+{{ partial "navbar.html" . }}
+{{ partial "navbar-clone.html" . }}
+
+<section class="section is-medium" style="background-image: url({{ .Params.Image }}); 
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;">
+    <div class="container" >
+        <div class="columns">
+          <div class="column is-centered-tablet-portrait" style="background-color:{{ .Site.Params.section1_attention.heroBackgroundColor }};">
+            <h1 class="title section-title" style="font-size:48px;color:{{ .Site.Params.section1_attention.titleTextColor }}">{{ .Title }}</h1>
+          </div>
+        </div>
+    </div>
+</section>
+
+<section class="section is-medium">
+  <div class="container">
+    <div class="content">
+      {{ .Content }}
+    </div>
+  </div>
+</section>
+
+{{- if .Params.include_cta }}
+{{ partial "section6-action.html" . }}
+{{- end}}
+
+<!-- Back To Top Button -->
+<div id="backtotop"><a href="#"></a></div>
+
+{{ partial "footer.html" . }}
+
+{{ end }}

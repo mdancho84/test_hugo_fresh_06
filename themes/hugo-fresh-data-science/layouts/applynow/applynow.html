@@ -1,0 +1,23 @@
+{{ define "main" }}
+
+    
+    {{ partial "navbar.html" . }}
+    {{ partial "navbar-clone.html" . }}
+    
+    
+    {{ if .Site.Params.applynow }}
+    {{ partial "application.html" . }}
+    {{ end }}
+
+    {{ if .Site.Params.footer }}
+    {{ partial "footer.html" . }}
+    {{ end }}
+
+    <!-- Back To Top Button -->
+    <div id="backtotop"><a href="#"></a></div>
+
+    {{ if .Site.Params.sidebar }}
+    {{ partial "sidebar.html" . }}
+    {{ end }}
+    
+{{ end }}

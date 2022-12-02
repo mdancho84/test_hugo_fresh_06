@@ -1,0 +1,208 @@
+baseURL: http://business-science.io/
+languageCode: en-us
+title: Forecast Science
+theme: "hugo-fresh-data-science"
+# Put in your google analytics tracking code without quotes like this: UA-XXXXXX...
+googleAnalytics: # UA-XXXXX...
+
+# Disables warnings
+disableKinds:
+- taxonomy
+- taxonomyTerm
+markup:
+  goldmark:
+    renderer:
+      unsafe: true # Allows you to write raw html in your md files
+
+params:
+  # Put your formspree URL in like this:  https://formspree.io/f/...
+  formspreeURL: "https://formspree.io/f/xgeqjjgg"
+  # Open graph allows easy social sharing. If you don't want it you can set it to false or just delete the variable
+  openGraph: true
+  # Used as meta data; describe your site to make Google Bots happy
+  description: We are a consulting firm specializing in forecasting at scale
+  # Preloader ensures images are loaded before displaying to the user. If you don't want it uncomment to set it to false
+  # preloader: false
+  navbarlogo:
+  # Logo (from static/images/logos/___)
+    image: logos/business-science-logo.png
+    link: /
+    brandName: Forecast Science
+    # Default width/height. Uncomment if you need to change
+    width: 40
+    height: 40
+  
+  # Web Fonts Available Here: https://fonts.google.com/
+  googleFontImport: 'https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;600&family=Montserrat:wght@600&family=Zen+Dots&display=swap'
+  header_font: "Zen Dots"
+  body_font: "Montserrat"
+  
+  # css
+  css:
+    secondary_color: "#4FC1EA" # "#F39200" "#4FC1EA" "#00efb7" (Controls Buttons, Accents)
+    mutedgrey_color: "#999" # "#999" # Contols writing 
+    greydark_color: "#4a4a4a" # "#4a4a4a" Controls Headers
+    bluegrey_color: "#444F60" # "#444F60" (Controls Headers & Footer Background)
+    navbar_color: "#FFF" # "#FFF"
+    navbar_text_color: "#999" # #999
+  
+  # Customizable navbar. For a dropdown, add a "sublinks" list.
+  navbarStyle:
+  navbar:
+  # - title: Dropdown
+  #   sublinks:
+  #   - title: Dropdown item
+  #     url: /
+  #   - title: Dropdown item
+  #     url: /
+  #   - title: Dropdown item
+  #     url: /
+  - title: Forecast Services
+    url: /consulting
+  - title: New Topic
+    url: /newtopic
+  - title: Testimonials
+    url: /testimonials
+  - title: Blog
+    url: /blog
+  - title: Contact Us
+    url: /contact
+  - title: Apply Now
+    url: /applynow
+    button: true
+  
+  applynow:
+    title: Claim your free HR Analytics consultation right now.
+    subtitle: Let's have a conversation today 
+    googleFormEmbed: "https://docs.google.com/forms/d/e/1FAIpQLSfokr64SPxku7VbG-XMhsk4eJ0fWWZsCT6eZuE9LFlmIqSO5Q/viewform?embedded=true"
+  
+  contact:
+    title: Contact Us
+    subtitle: What can we help you with?
+    buttontext: Contact Us
+  
+  section1_attention:
+    # Main hero title
+    title: "Save $2M with better forecasting in 120 days"
+    titleTextColor: "pink"
+    # Hero subtitle (optional)
+    subtitle: "We save our clients on average $2M per year through improved forecasting."
+    heroBackgroundColor: "#000000c7"
+    
+    # Button text
+    buttontext: "How it works"
+    # Where the main hero button links to
+    buttonlink: "/#section2"
+    # Hero image (from static/images/___)
+    # Can get these images from flaticon.com
+    image: illustrations/mockups/nostradamus_app.jpg
+    backgroundImage: illustrations/happy-clients.jpg
+    clientstext: "Some of the clients we've helped:"
+    # Footer logos (from static/images/logos/clients/___.svg)
+    clientlogos:
+    - systek.svg
+    - tribe.svg
+    - kromo.svg
+    - infinite.svg
+    - gutwork.svg
+ 
+  section2_transformation:
+    title: "How forecast science works." 
+    subtitle: "Reduce costs from forecasting errors in 4 simple steps"
+    # icons are located in static > images > illustrations > icons
+    tile_size: is-one-third
+    tile_height: "400px"
+    tiles:
+    # - title: "Step 1"
+    #   subtitle: Speak With A Consultant Today
+    #   icon: conversation.svg
+    #   text: Speak with one of our business consultants about your needs and how our program can help you.
+    - title: "Step 2"
+      subtitle: Become Better At Forecasting
+      icon: forecasting.svg
+      text: We work with your team to build a forecast application tailored to improve your business.
+    - title: "Step 3"
+      subtitle: Business Integration
+      icon: collaboration.svg
+      text: We integrate your new forecasting application and train your team to use it.
+    - title: "Step 4"
+      subtitle: Monitor Savings
+      icon: monitoring.svg
+      text: We help your team measure savings versus baselines. On average our clients save $2M per year.
+  
+  section3_interest:
+    title: Get results faster
+    subtitle: With your custom forecasting application
+    image: illustrations/mockups/nostradamus_app.jpg
+    tile_size: is-one-third
+    tile_height: "200px"
+    tiles:
+    - title: "Get results in 120 days"
+      subtitle: "Go from losing money to saving money without hiring multiple consultants or handling time-consuming project management yourself."
+    - title: "Safe and Secure"
+      subtitle: "You don't need to upload your data to unsecure cloud networks. The forecasting application can be deployed on your own server network."
+    - title: "Our ROI Guarantee"
+      subtitle: "On average we save our clients $2M per year. If we can't at least save you what you pay us, we'll give you your money back."
+    
+    
+  section4_desire:
+    title: Trusted by awesome companies like these that are saving money and improving their demand planning
+    subtitle: Real results from our valued clients.
+    clients:
+    - name: Irma
+      quote: We were able to recover $5.3M by optimizing our supply and demand planning system using Forecasting Science. They delivered a solution in 90 days. This project was a slam dunk.
+      job: Senior VP, Exxon Mobil
+      img: 1.png
+    - name: John
+      quote: We literally can't live without our new demand planning system built by Forecasting Science, LLC. These guys delivered a $3.4M improvement to operations in under 6 months.
+      job: CEO, Tech Company
+      img: 2.png
+    - name: Gary
+      quote: I finally took the plunge and boy did it pay off. We got the first version of our forecasting system in 60 days. Let's just say that the ROI was immediate.
+      job: Executive VP, Marathon Petroleum
+      img: 3.png
+  
+  section5_faq: false
+  
+  section6_action:
+    callToActionText: Would you like to be our next success story?
+    buttonText: Apply now
+    buttonLink: /applynow
+  
+  footer:
+    # Logo (from /images/logos/___)
+    logo: business-science-logo.png
+    navbarLogoWidth: "200px"
+    navbarLogoHeight: "200px"
+    # Social Media Title
+    socialmediatitle: Follow Us
+    # Social media links (GitHub, Twitter, etc.). All are optional.
+    # Icons are from Font Awesome
+    socialmedia:
+    - link: https://www.linkedin.com/
+      icon: linkedin
+    - link: https://facebook.com/#
+      icon: facebook
+    - link: https://twitter.com/lucperkins
+      icon: twitter
+    - link: https://github.com/lucperkins/github-fresh
+      icon: github
+    bulmalogo: false
+    quicklinks:
+      column1:
+        title: "Consulting"
+        links:
+        - text: Why choose Forecast Science?
+          link: /consulting
+        - text: Testimonials
+          link: /testimonials
+        - text: Apply to work with us
+          link: /applynow
+      column2:
+        title: "Blog"
+        links:
+        - text: Latest news
+          link: /blog
+          
+
+          

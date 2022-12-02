@@ -1,0 +1,54 @@
+{{ define "main" }}
+{{ partial "navbar.html" . }}
+{{ partial "navbar-clone.html" . }}
+<section class="section is-medium" style="background-image: url({{ printf "/images/%s" .Site.Params.section1_attention.backgroundImage | relURL }}); 
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;">
+    <div class="container" >
+        <div class="columns">
+          <div class="column is-centered-tablet-portrait" style="background-color:{{ .Site.Params.section1_attention.heroBackgroundColor }};">
+            <h1 class="title section-title" style="font-size:48px;color:{{ .Site.Params.section1_attention.titleTextColor }}">Read some of our articles...</h1>
+          </div>
+        </div>
+    </div>
+</section>
+<section class="section is-medium">
+	<div class="container">
+	    
+		{{ range .Paginator.Pages }}
+		
+		<article class="media">
+          <figure class="media-left">
+            <p class="image is-128x128">
+            <a class="text-dark" href="{{ .Permalink }}">
+                <img src="{{ .Params.image | absURL }}" style="-webkit-filter: drop-shadow(5px 5px 5px #222);">
+              </a>
+            </p>
+          </figure>
+          <div class="media-content">
+            <div class="content">
+              <h3>
+                <a class="text-dark" href="{{ .Permalink }}"><strong>{{ .Title }}</strong></a>
+              </h3>
+              <h5><small>Written by {{ .Params.author }} on {{ .PublishDate.Format "January 2, 2006" }}</small></h5>
+              <br />
+              <p>
+                  {{ .Summary }}
+              </p>
+              <div>
+                <a href="{{ .Permalink }}">Read More…</a>
+              </div>
+            </div>
+          </div>
+        </article>
+		{{ end }}
+		
+	</div>
+</section>
+
+{{ partial "footer.html" . }}
+
+{{ end }}

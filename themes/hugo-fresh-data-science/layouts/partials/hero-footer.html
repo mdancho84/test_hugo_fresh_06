@@ -1,0 +1,22 @@
+{{- $hero         := .Site.Params.section1_attention }}
+{{- $clientstext  := index $hero "clientstext" }}
+{{- $clientLogos  := index $hero "clientlogos" }}
+<div class="hero-foot mb-20 parallax" style="padding-top:20px;">
+  <div class="container">
+    <div class="title-wrapper has-text-centered">
+      <h3 class="subtitle is-5 is-muted">{{ $clientstext }}</h3>
+    </div>
+    <div class="tabs is-centered">
+        
+      <ul>
+        {{- range $clientLogos }}
+        <li>
+          <a>
+            <img class="partner-logo" src="{{ printf "/images/logos/clients/%s" . | relURL }}">
+          </a>
+        </li>
+        {{- end }}
+      </ul>
+    </div>
+  </div>
+</div>

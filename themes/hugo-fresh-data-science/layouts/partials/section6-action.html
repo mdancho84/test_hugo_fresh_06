@@ -1,0 +1,18 @@
+{{- $section6         := .Site.Params.section6_action }}
+{{- $buttonText       := index $section6 "buttontext" }}
+{{- $buttonLink       := index $section6 "buttonlink" }}
+{{- $calltoactiontext := index $section6 "callToActionText" }}
+<section class="section section-feature-grey is-medium" id="section6">
+  <div class="container">
+    
+    <div class="title-wrapper has-text-centered">
+      <h2 class="title is-2">{{ $calltoactiontext }}</h2>
+    </div>
+
+    <p class="has-text-centered mt-20">
+      <a class="button cta is-large rounded secondary-btn raised" href="{{ $buttonLink }}">
+        {{ $buttonText }}
+      </a>
+    </p>
+  </div>
+</section>
